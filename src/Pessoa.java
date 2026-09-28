@@ -1,13 +1,11 @@
 public class Pessoa {
     private String nome;
     private String cpf;
-    private String endereco;
-    private int telefone;
+    private String telefone;
 
-    public Pessoa(String nome, String cpf, String endereco, int telefone) {
+    public Pessoa(String nome, String cpf, String telefone) {
         this.nome = nome;
         this.cpf = cpf;
-        this.endereco = endereco;
         this.telefone = telefone;
     }
 
@@ -21,11 +19,7 @@ public class Pessoa {
         return cpf;
     }
 
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
@@ -39,11 +33,7 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 }

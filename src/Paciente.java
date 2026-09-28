@@ -1,6 +1,20 @@
 public class Paciente extends Pessoa {
 
-    public Paciente(String nome, String cpf, String endereco, int telefone) {
-        super(nome, cpf, endereco, telefone);
+    private String procedimento;
+
+    public Paciente(String nome, String cpf, String telefone) {
+        super(nome, cpf, telefone);
+    }
+
+    // Getter
+
+    public String getProcedimento() {
+        return procedimento;    
+    }
+
+    // Setter
+
+    public void setProcedimento(String procedimento) {
+        this.procedimento = procedimento;
     }
 }
