@@ -1,7 +1,7 @@
 public class Procedimento {
     String procedimento;
 
-    public Procedimento() {
+    public Procedimento(String procedimento) {
         this.procedimento = procedimento;
     }
 

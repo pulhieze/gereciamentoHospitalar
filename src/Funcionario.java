@@ -2,10 +2,9 @@ public class Funcionario extends Pessoa {
     private String cargo;
     private Procedimento procedimento;
 
-    public Funcionario(String nome, String cargo, Procedimento procedimento) {
+    public Funcionario(String nome, String cargo) {
         super(nome, "00000000000", "0000-0000");
         this.cargo = cargo;
-        this.procedimento = procedimento;
     }
 
     // Getters
