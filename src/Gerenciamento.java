@@ -4,17 +4,15 @@ public class Gerenciamento {
    }
 
    public static void main(String[] args) {
-      System.out.println("Gerenciamento iniciado.");
+      System.out.println("Gerenciamento iniciado.\n");
 
       Procedimento procedimento = new Procedimento("Cirurgia");
 
-      Medico medico = new Medico("Dr Carlos", "Médico" , procedimento);
-
+      Medico medico = new Medico("Dr Carlos", "Médico" , procedimento, "Cirurgia");
       Paciente paciente = new Paciente("Fernando", "12345678910", "9999-9999");
+      Enfermeiro enfermeiro = new Enfermeiro("Marcela", "Enfermeira");
 
-      System.out.println(medico.getNome());
-      System.out.println(medico.getCargo());
-      System.out.println(medico.realizarProcedimento(paciente));
+      medico.realizarProcedimento(paciente, enfermeiro);
 
       
    }

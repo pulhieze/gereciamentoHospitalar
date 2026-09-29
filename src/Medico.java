@@ -1,12 +1,33 @@
 public class Medico extends Funcionario {
     Procedimento procedimento;
+    String especialidade;
 
-    public Medico(String nome, String cargo, Procedimento procedimento) {
+    public Medico(String nome, String cargo, Procedimento procedimento, String especialidade) {
         super(nome, cargo);
         this.procedimento = procedimento;
+        this.especialidade = especialidade;
+
     }
 
-    public void realizarProcedimento(Paciente paciente) {
-        System.out.printf("O procedimento %s no paciente %s", procedimento.getProcedimento(), paciente.getNome());
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    public void realizarProcedimento(Paciente paciente, Enfermeiro enfermeiro) {
+        if (getEspecialidade() != procedimento.getProcedimento()) {
+            System.out.println("Este médico não possui essa especialidade");
+
+        }
+
+        else {
+            System.out.printf
+            ("Informações:\nPaciente: %s\nProcedimento: %s\nMédico: %s\nEnfermeiro: %s",
+                paciente.getNome(),
+                procedimento.getProcedimento(),
+                getNome(),
+                enfermeiro.getNome()
+            );
+        }
+        
     }
 }
