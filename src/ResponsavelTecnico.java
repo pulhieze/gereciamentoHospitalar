@@ -14,8 +14,8 @@ public class ResponsavelTecnico extends Funcionario {
         this.liberacaoTecnica = liberacaoTecnica;
     }
 
-    public void liberarProcedimento (boolean liberacaoTecnica, Medico medico) {
-        if (liberacaoTecnica) {
+    public void liberarProcedimento (boolean liberacaoTecnica, Procedimento procedimento) {
+        if (procedimento.status) {
             
         }
 
