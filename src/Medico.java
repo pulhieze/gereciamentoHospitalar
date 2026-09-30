@@ -13,6 +13,26 @@ public class Medico extends Funcionario {
         return especialidade;
     }
 
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
+    }
+
+    public void realizarProcedimento(Paciente paciente) {
+        if (getEspecialidade() != procedimento.getProcedimento()) {
+            System.out.println("Este médico não possui essa especialidade");
+
+        }
+
+        else {
+            System.out.printf
+            ("\n\nInformações:\nPaciente: %s\nProcedimento: %s\nMédico: %s\nEnfermeiro: %s",
+                paciente.getNome(),
+                procedimento.getProcedimento(),
+                getNome()
+            );
+        }
+    }
+
     public void realizarProcedimento(Paciente paciente, Enfermeiro enfermeiro) {
         if (getEspecialidade() != procedimento.getProcedimento()) {
             System.out.println("Este médico não possui essa especialidade");
@@ -21,13 +41,30 @@ public class Medico extends Funcionario {
 
         else {
             System.out.printf
-            ("Informações:\nPaciente: %s\nProcedimento: %s\nMédico: %s\nEnfermeiro: %s",
+            ("\n\nInformações:\nPaciente: %s\nProcedimento: %s\nMédico: %s\nEnfermeiro: %s",
                 paciente.getNome(),
                 procedimento.getProcedimento(),
                 getNome(),
                 enfermeiro.getNome()
             );
         }
-        
+    }
+
+    public void realizarProcedimento(Paciente paciente, Enfermeiro enfermeiro, Anestesista anestesista) {
+        if (getEspecialidade() != procedimento.getProcedimento()) {
+            System.out.println("Este médico não possui essa especialidade");
+
+        }
+
+        else {
+            System.out.printf
+            ("\n\nInformações:\nPaciente: %s\nProcedimento: %s\nMédico: %s\nEnfermeiro: %s",
+                paciente.getNome(),
+                procedimento.getProcedimento(),
+                getNome(),
+                enfermeiro.getNome(),
+                anestesista.getNome()
+            );
+        }
     }
 }

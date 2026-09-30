@@ -12,8 +12,4 @@ public class Procedimento {
     public void setProcedimento(String procedimento) {
         this.procedimento = procedimento;
     }
-
-    public void realizarProcedimento(Paciente paciente) {
-
-    };
 }

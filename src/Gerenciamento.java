@@ -11,8 +11,11 @@ public class Gerenciamento {
       Medico medico = new Medico("Dr Carlos", "Médico" , procedimento, "Cirurgia");
       Paciente paciente = new Paciente("Fernando", "12345678910", "9999-9999");
       Enfermeiro enfermeiro = new Enfermeiro("Marcela", "Enfermeira");
+      Anestesista anestesista = new Anestesista("Leando", "Anestesista");
 
       medico.realizarProcedimento(paciente, enfermeiro);
+
+      medico.realizarProcedimento(paciente, enfermeiro, anestesista);
 
       
    }
