@@ -4,6 +4,7 @@ public class Procedimento {
 
     public Procedimento(String procedimento) {
         this.procedimento = procedimento;
+        this.status = false;
     }
 
     public String getProcedimento() {

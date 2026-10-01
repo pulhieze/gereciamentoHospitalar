@@ -1,4 +1,4 @@
-public class Funcionario extends Pessoa {
+public abstract class Funcionario extends Pessoa {
     private String cargo;
     private Procedimento procedimento;
 
