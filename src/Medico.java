@@ -19,12 +19,13 @@ public class Medico extends Funcionario {
     public void realizarProcedimento(Paciente paciente, Procedimento procedimento) {
         if (getEspecialidade() != procedimento.getProcedimento()) {
             System.out.println("Este médico não possui essa especialidade");
-
+            paciente.setStatusPosProcedimento(false);
         }
 
         else {
             if (procedimento.status == false) {
                 System.out.println("O responsavel técnico não aprovou o procedimento");
+                paciente.setStatusPosProcedimento(false);
             }
 
             else {
@@ -34,6 +35,8 @@ public class Medico extends Funcionario {
                     procedimento.getProcedimento(),
                     getNome()
                 );
+
+                paciente.setStatusPosProcedimento(true);
             }
         }
     }
@@ -41,13 +44,14 @@ public class Medico extends Funcionario {
     public void realizarProcedimento(Paciente paciente, Procedimento procedimento, Enfermeiro enfermeiro) {
         if (getEspecialidade() != procedimento.getProcedimento()) {
             System.out.println("Este médico não possui essa especialidade");
-
+            paciente.setStatusPosProcedimento(false);
         }
 
         else {
             
             if(procedimento.status == false) {
                 System.out.println("O responsavel técnico não aprovou o procedimento");
+                paciente.setStatusPosProcedimento(false);
             }
 
             else {
@@ -58,6 +62,8 @@ public class Medico extends Funcionario {
                     getNome(),
                     enfermeiro.getNome()
                 );
+
+                paciente.setStatusPosProcedimento(true);
             }
         }
     }
@@ -65,12 +71,13 @@ public class Medico extends Funcionario {
     public void realizarProcedimento(Paciente paciente, Procedimento procedimento, Enfermeiro enfermeiro, Anestesista anestesista) {
         if (getEspecialidade() != procedimento.getProcedimento()) {
             System.out.println("Este médico não possui essa especialidade");
-
+            paciente.setStatusPosProcedimento(false);
         }
 
         else {
             if(procedimento.status == false) {
                 System.out.println("O responsavel técnico não aprovou o procedimento");
+                paciente.setStatusPosProcedimento(false);
             }
 
             else {
@@ -82,7 +89,19 @@ public class Medico extends Funcionario {
                     enfermeiro.getNome(),
                     anestesista.getNome()
                 );
+
+                paciente.setStatusPosProcedimento(true);
             }
+        }
+    }
+
+    public void altaPaciente(Paciente paciente) {
+        if (paciente.statusPosProcedimento == false) {
+            System.out.printf("\nO médico %s não deu alta para o paciente %s", getNome(), paciente.getNome());
+        }
+
+        else {
+            System.out.printf("\nO médico %s deu alta para o paciente %s", getNome(), paciente.getNome());
         }
     }
 }

@@ -19,6 +19,7 @@ public class Gerenciamento {
       responsavelTecnico.liberarProcedimento(procedimento);
 
       medico.realizarProcedimento(paciente, procedimento, enfermeiro, anestesista);
+      medico.altaPaciente(paciente);
 
       // Procedimento 2
 
@@ -26,11 +27,10 @@ public class Gerenciamento {
       Procedimento procedimento2 = new Procedimento("Cirurgia Estética");
       Paciente paciente2 = new Paciente("Luisa", "10987654321", "0000-0000");
       Enfermeiro enfermeiro2 = new Enfermeiro("Helena", "Enfermeira");
-      
+
       responsavelTecnico.liberarProcedimento(procedimento2);
       
       medico2.realizarProcedimento(paciente2, procedimento2, enfermeiro2);
-
-      
+      medico2.altaPaciente(paciente2);
    }
 }

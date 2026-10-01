@@ -14,6 +14,12 @@ public class ResponsavelTecnico extends Funcionario {
     }
 
     public void liberarProcedimento (Procedimento procedimento) {
-        procedimento.setStatus(true);
+        if (procedimento.status == false) {
+            procedimento.setStatus(true);
+        }
+
+        else {
+            procedimento.setStatus(false);
+        }
     }
 }
